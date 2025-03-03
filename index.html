@@ -11,52 +11,55 @@
             color: #29462A;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 90%;
             margin: 50px auto;
             padding: 20px;
         }
         .header {
-            text-align: center;
             font-size: 32px;
             font-weight: bold;
         }
         .description {
-            text-align: center;
             font-size: 18px;
             margin-top: 10px;
         }
-        .feature {
+        .features-container {
             display: flex;
-            align-items: center;
-            margin-top: 30px;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 20px 0;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+            max-width: 1800px;
+            margin: 0 auto;
         }
-        .feature:nth-child(odd) {
-            flex-direction: row-reverse;
+        .feature {
+            flex: 0 0 auto;
+            width: 19%;
+            min-width: 250px;
+            text-align: center;
+            scroll-snap-align: start;
         }
         .feature img {
-            width: 40%;
-            max-width: 300px;
+            width: 100%;
+            max-width: 250px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-        }
-        .feature-text {
-            width: 60%;
-            padding: 10px;
         }
         .notify-button {
-            display: block;
-            width: max-content;
+            display: inline-block;
             background-color: #29462A;
             color: #FBF1E5;
             padding: 15px 30px;
             font-size: 18px;
             text-decoration: none;
             border-radius: 5px;
-            margin: 40px auto;
-            text-align: center;
+            margin-top: 20px;
         }
         .notify-button:hover {
             background-color: #3B703C;
@@ -68,44 +71,32 @@
         <div class="header">Introducing Gdgt+</div>
         <div class="description">A smarter way to manage your gadgets and reduce e-waste.</div>
         
-        <div class="feature">
-            <div class="feature-text">
+        <div class="features-container">
+            <div class="feature">
+                <img src="screenshot_1.jpg" alt="Buy Smart">
                 <h3>Buy Smart</h3>
-                <p>No more falling for fake online reviews. Gdgt+ lets you see what gadgets your friends actually own and recommend before making a purchase. This ensures you make informed decisions based on real user experiences rather than misleading ads or paid promotions.</p>
+                <p>See what gadgets your friends own and recommend before making a purchase.</p>
             </div>
-            <img src="screenshot_1.jpg" alt="Buy Smart">
-        </div>
-        
-        <div class="feature">
-            <div class="feature-text">
-                <h3>Organize Everything in One Place</h3>
-                <p>Keep track of all your devices effortlessly. Store digital receipts, warranty details, user manuals, and customer support contacts in a single location. Never waste time searching for important documents again.</p>
+            <div class="feature">
+                <img src="screenshot_2.jpg" alt="Organize Everything">
+                <h3>Organize Everything</h3>
+                <p>Store receipts, warranties, and manuals in one place for easy access.</p>
             </div>
-            <img src="screenshot_2.jpg" alt="Organize Everything">
-        </div>
-        
-        <div class="feature">
-            <div class="feature-text">
-                <h3>AI-Powered Assistant</h3>
-                <p>Need help? Our intelligent assistant understands your gadgets and provides instant troubleshooting support. Get quick answers to common issues and minimize repair costs with proactive solutions tailored to your devices.</p>
+            <div class="feature">
+                <img src="screenshot_3.jpg" alt="AI Assistant">
+                <h3>AI Assistant</h3>
+                <p>Instant troubleshooting and smart recommendations to help you manage gadgets.</p>
             </div>
-            <img src="screenshot_3.jpg" alt="AI Assistant">
-        </div>
-        
-        <div class="feature">
-            <div class="feature-text">
-                <h3>Stay on Top of Maintenance</h3>
-                <p>Receive timely reminders for software updates, battery replacements, and maintenance tips. Extend your device’s lifespan and optimize performance by staying ahead of necessary upkeep tasks.</p>
+            <div class="feature">
+                <img src="screenshot_4.jpg" alt="Maintenance Alerts">
+                <h3>Stay on Top</h3>
+                <p>Receive reminders for updates, battery replacements, and maintenance.</p>
             </div>
-            <img src="screenshot_4.jpg" alt="Maintenance Alerts">
-        </div>
-        
-        <div class="feature">
-            <div class="feature-text">
+            <div class="feature">
+                <img src="screenshot_5.jpg" alt="Dispose Responsibly">
                 <h3>Dispose Responsibly</h3>
-                <p>When it’s time to replace a gadget, Gdgt+ guides you to the best recycling, trade-in, and buyback options. Reduce e-waste by ensuring your devices are disposed of in an environmentally responsible way.</p>
+                <p>Find the best recycling, trade-in, and buyback options for your old gadgets.</p>
             </div>
-            <img src="screenshot_5.jpg" alt="Dispose Responsibly">
         </div>
         
         <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="notify-button">Notify Me</a>
