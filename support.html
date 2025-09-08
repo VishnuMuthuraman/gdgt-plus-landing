@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>gdgt+ · Support</title>
+  <meta name="description" content="Support for gdgt+: help, FAQs, contact form, and account deletion info." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #111827;
+      --muted: #9CA3AF;
+      --text: #E5E7EB;
+      --brand: #10B981;
+      --link:#60a5fa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 800px at 80% 10%, #0b1420 0%, var(--bg) 60%);
+      color:var(--text);
+    }
+    header{padding:40px 24px; text-align:center}
+    .logo{font-weight:800; letter-spacing:.2px; font-size:22px}
+    .logo b{color:var(--brand)}
+    .wrap{max-width:980px; margin:0 auto; padding:0 20px 64px}
+    .grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:24px}
+    @media (max-width: 980px){ .grid{grid-template-columns: 1fr} }
+    .card{
+      background:linear-gradient(180deg, #0f172a 0%, var(--panel) 100%);
+      border:1px solid #1f2937; border-radius:16px; padding:22px 20px; box-shadow:0 10px 30px rgba(0,0,0,.25)
+    }
+    h1{font-size:28px; margin:0 0 8px}
+    h2{font-size:20px; margin:12px 0}
+    p{line-height:1.6; color:#cbd5e1}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .muted{color:var(--muted); font-size:12px}
+    .fineprint{color:#6b7280; font-size:12px; margin-top:10px}
+    .badge{display:inline-block; padding:4px 10px; border-radius:999px; font-size:12px; background:#0b1a2f; border:1px solid #1f2a44; color:#9ec3ff}
+    .notice{background:#0b1f16; border:1px solid #123225; padding:12px 14px; border-radius:12px; margin:12px 0; font-size:14px}
+    .list{margin:8px 0 0 18px}
+    .list li{margin:6px 0}
+    .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#0b1220; border:1px solid #243043; padding:2px 6px; border-radius:6px; font-size:12px}
+    footer{border-top:1px solid #1f2937; padding:28px 20px; text-align:center; color:#8b98a5}
+
+    /* Responsive iframe wrapper */
+    .iframe-wrap {
+      position: relative;
+      width: 100%;
+      min-height: 900px;    /* mobile baseline */
+      border-radius: 12px;
+      overflow: hidden;
+      background: #0b1220;
+      border: 1px solid #243043;
+    }
+    .iframe-wrap iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    @media (min-width: 480px){ .iframe-wrap{ min-height: 1100px; } }
+    @media (min-width: 900px){ .iframe-wrap{ min-height: 1250px; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">gdgt<b>+</b> Support</div>
+  <p class="muted">Get help, contact us, or manage your account.</p>
+</header>
+
+<div class="wrap">
+  <div class="grid">
+    <!-- LEFT: GOOGLE FORM (EMBED) -->
+    <section class="card" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contact us</h1>
+      <p>Describe the issue you’re facing and we’ll get back to you (typically within 2 business days).</p>
+
+      <div class="iframe-wrap">
+        <!-- Embedded Google Form -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9M7yTD9UNPXC5en2aQTTnf9AgRMDv1yxXlM8H7IdiLIfOkA/viewform?embedded=true" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+
+      <p class="fineprint">
+        Prefer email? Write to <a href="mailto:vish.muthuraman@gmail.com">vish.muthuraman@gmail.com</a>.
+      </p>
+    </section>
+
+    <!-- RIGHT: FAQ + ACCOUNT -->
+    <aside class="card" aria-labelledby="help-title">
+      <h2 id="help-title">Help & FAQs</h2>
+      <span class="badge">Quick answers</span>
+      <ul class="list">
+        <li><b>Signing in:</b> Make sure you’re on the latest version of gdgt+. If you forgot your password, use <span class="kbd">Forgot Password</span> from the sign-in screen.</li>
+        <li><b>Searching manuals:</b> Try exact product names or model numbers. If no results, please send the product link and we’ll add it.</li>
+        <li><b>App issues:</b> From the app, go to <span class="kbd">Settings → Help → Send Feedback</span> to attach logs.</li>
+      </ul>
+
+      <h2 style="margin-top:18px">Account deletion</h2>
+      <div class="notice">
+        You can initiate account deletion in the gdgt+ app at <span class="kbd">Settings → Account → Delete Account</span>.
+        If a browser step is needed, we’ll send you to the exact page to finish deletion and email you a confirmation when it’s complete.
+      </div>
+      <p class="muted">
+        Data deletion removes personal information and associated content except where retention is legally required (e.g., billing/anti-fraud).
+        Learn more in our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms</a>.
+      </p>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <small>© <span id="yr"></span> gdgt+. All rights reserved.</small>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
